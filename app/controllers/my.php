@@ -51,7 +51,7 @@ class My extends ControllerBase{
 		else 
 		{
 				 
-			$message=$this->semantic->htmlMessage("error","Merci de vous connecter pour tester.");
+			$message=$this->semantic->htmlMessage("error","Merci de vous connecter pour tests.");
 			$message->setIcon("announcement")->setError();
 			$message->setDismissable();
 			$message->addContent(Auth::getInfoUser($this,"-login"));
