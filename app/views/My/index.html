@@ -1,0 +1,93 @@
+<h2 class="ui header">
+    Mes services
+    <div class="sub header">Liste des machines et des machines virtuelles HTTP.</div>
+</h2>
+ 
+<div class="ui grid">
+
+    <div class="eight wide column">
+    
+        <h3 class="ui header">
+            Mes Hosts
+            <div class="sub header">Serveurs dédiés.</div>
+			<!-- twig pour appeler l'objet list-host -->
+            {{ q["list-hosts"] | raw }} 
+				<div style="margin-left:50% ; margin-top:0px">
+					 </button>
+  							<button class="ui button">
+							<i class="ghost snapchat icon"></i>
+    						Virtualhosts
+  					</button>
+				</div>
+		</h3>
+		
+    </div>
+    
+    
+    <div class="eight wide column">
+    	<h3 class="ui header">
+            Mes Virtualhosts
+			<h1>Members</h1>
+			
+			
+			
+			
+			<!-- Utilisation de twig pour parcourir le tableau passé dans la vue et gère la mise en forme  -->
+			
+			<div class="sub header">Hôtes virtuels sur serveurs mutualisés.</div>
+			<ul>
+			
+				<!-- Pour chaque objet virtualhost dans le tableau qui contient tous les objets virtualhost 
+			on affiche {{LEvhost}} et tous les bouttons en dessous -->
+			    {% for vhost in tableau_vhosts %}
+			        <h3 class="ui header">
+			        
+			        
+				  <img class="ui massive rounded image" src="/micro-virtualhosts/public/img/virtualhost.png">
+				  
+				  
+				  <div class="content">
+				     
+					     {{ vhost }}<br>
+					
+					
+					<div class="ui labeled buttons">
+					
+					
+						    <a href="Display/virtualhost/{{ vhost.Id }}">
+							  <button class="ui button">
+							    	<i class="unhide icon"></i>
+							  </button>
+							</a>
+						
+							<a href="Display/confvhost/{{ vhost.Id }}">
+							  <button class="ui button">
+							    	<i class="configure icon"></i>
+							    Configuration
+							  </button>
+							</a>
+							
+							
+							<a>
+							  <button class="ui button">
+							    	<i class="refresh icon"></i>
+							    Recharger
+							  </button>
+						   </a>
+					   
+					   
+					</div>
+				
+				  </div>
+				  
+				</h3>
+				    {% endfor %}
+				    
+			</ul>
+	
+		</h3>
+	</div>
+    
+    
+    
+</div>
