@@ -10,7 +10,7 @@
         <h3 class="ui header">
             Mes Hosts
             <div class="sub header">Serveurs dédiés.</div>
-			<!-- twig pour appeler l'objet list-host -->
+			
             {{ q["list-hosts"] | raw }} 
 				<div style="margin-left:50% ; margin-top:0px">
 					 </button>
@@ -31,14 +31,11 @@
 			
 			
 			
-			
-			<!-- Utilisation de twig pour parcourir le tableau passé dans la vue et gère la mise en forme  -->
-			
+						
 			<div class="sub header">Hôtes virtuels sur serveurs mutualisés.</div>
 			<ul>
 			
-				<!-- Pour chaque objet virtualhost dans le tableau qui contient tous les objets virtualhost 
-			on affiche {{LEvhost}} et tous les bouttons en dessous -->
+				
 			    {% for vhost in tableau_vhosts %}
 			        <h3 class="ui header">
 			        
